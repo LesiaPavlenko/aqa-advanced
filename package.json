@@ -1,0 +1,28 @@
+{
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "description": "Test package for QA automation",
+  "keywords": [
+    "automation",
+    "qa",
+    "test"
+  ],
+  "homepage": "https://github.com/LesiaPavlenko/aqa-advanced#readme",
+  "bugs": {
+    "url": "https://github.com/LesiaPavlenko/aqa-advanced/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LesiaPavlenko/aqa-advanced.git"
+  },
+  "license": "ISC",
+  "author": "olesia pavlenko",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
+}
