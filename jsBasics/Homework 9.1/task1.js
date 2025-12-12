@@ -3,11 +3,11 @@
 
 const student = {}; // Create an empty object
 
-// Adding properties to the student object   
-student.firstName = "Olesia";
-student.lastName = "Pavlenko"; 
+// Adding properties to the student object
+student.firstName = 'Olesia';
+student.lastName = 'Pavlenko';
 student.age = 30;
-student.courses = ["Math", "Physics", "QA"]; 
+student.courses = ['Math', 'Physics', 'QA'];
 
 // Console output
-console.log(student);   
+console.log(student);
