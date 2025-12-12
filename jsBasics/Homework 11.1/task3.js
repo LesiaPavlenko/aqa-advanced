@@ -1,27 +1,42 @@
 // Homework 11.1 - Task 3
 // Using async/await to fetch TODO and User 
 
-
 async function fetchTodo() {
   const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  return response.json(); // Parsing JSON response
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch TODO: ${response.status}`);
+  }
+
+  return response.json(); 
 }
 
 async function fetchUser() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-  return response.json(); // Parsing JSON response
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch USER: ${response.status}`);
+  }
+
+  return response.json(); 
 }
 
-try { 
-  const [todoResult, userResult] = await Promise.all([fetchTodo(), fetchUser()]); // Using Promise.all to fetch all results
-  console.log("To-do result:", todoResult); // Handling results
-  console.log("User result:", userResult); // Handling results
+async function main() {
+  try { 
+    // Promise.all
+    const [todoResult, userResult] = await Promise.all([fetchTodo(), fetchUser()]);
+    console.log("To-do result:", todoResult);
+    console.log("User result:", userResult);
 
-  const firstResult = await Promise.race([fetchTodo(), fetchUser()]); // Using Promise.race to fetch the first completed
-  console.log("First completed result:", firstResult);
-  
-} catch (error) {
-  console.error("Error occurred:", error); // Handling errors
+    // Promise.race
+    const firstResult = await Promise.race([fetchTodo(), fetchUser()]);
+    console.log("First completed result:", firstResult);
+
+  } catch (error) {
+    console.error("Error occurred:", error);
+  }
 }
 
-export { fetchTodo, fetchUser }; 
+main();
+
+export { fetchTodo, fetchUser };
