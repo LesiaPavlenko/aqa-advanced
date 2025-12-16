@@ -14,7 +14,7 @@ console.log("Area =", area);
 console.log("Area2 =", area2);
 }
 
-// 4.2 Calculate the area of ​​the rectangle
+// 4.2 Calculate rectangle area
 {
 let length = 50.15;
 let width = 40.038;
@@ -27,7 +27,7 @@ console.log("Area =", area);
 console.log(`Length = ${length}, Width = ${width}, Area = ${area}`); // using template string
 }
 
-// 4.3 Calculate the volume of ​​the cylinder
+// 4.3 Calculate the volume of cylinder
 {
 let radius = 6; // radius of the cylinder
 let height = 13; // height of the cylinder
