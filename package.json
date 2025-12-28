@@ -1,41 +1,41 @@
 {
-	"name": "aqa-advanced",
-	"version": "1.0.0",
-	"description": "Test package for QA automation",
-	"keywords": [
-		"automation",
-		"qa",
-		"test"
-	],
-	"homepage": "https://github.com/LesiaPavlenko/aqa-advanced#readme",
-	"bugs": {
-		"url": "https://github.com/LesiaPavlenko/aqa-advanced/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/LesiaPavlenko/aqa-advanced.git"
-	},
-	"license": "ISC",
-	"author": "olesia pavlenko",
-	"type": "module",
-	"main": "index.js",
-	"scripts": {
-		"lint": "eslint .",
-		"test": "npm run lint",
-		"prepare": "husky"
-	},
-	"dependencies": {
-		"axios": "^1.13.2",
-		"chalk": "^5.6.2",
-		"jest": "^30.2.0"
-	},
-	"devDependencies": {
-		"@eslint/js": "^9.39.2",
-		"@eslint/json": "^0.14.0",
-		"eslint": "^9.39.2",
-		"eslint-config-prettier": "^10.1.8",
-		"globals": "^16.5.0",
-		"husky": "^9.1.7",
-		"prettier": "3.7.4"
-	}
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "description": "Test package for QA automation",
+  "keywords": [
+    "automation",
+    "qa",
+    "test"
+  ],
+  "homepage": "https://github.com/LesiaPavlenko/aqa-advanced#readme",
+  "bugs": {
+    "url": "https://github.com/LesiaPavlenko/aqa-advanced/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LesiaPavlenko/aqa-advanced.git"
+  },
+  "license": "ISC",
+  "author": "olesia pavlenko",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "chalk": "^5.6.2",
+    "jest": "^30.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@eslint/json": "^0.14.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "prettier": "3.7.4"
+  }
 }
