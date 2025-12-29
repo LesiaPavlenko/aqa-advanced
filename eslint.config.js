@@ -5,7 +5,20 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   // =========================
-  // Base JS config (all JS files)
+  // Global ignores (instead of .eslintignore)
+  // =========================
+  {
+    ignores: [
+      'build/**',
+      'coverage/**',
+      'node_modules/**',
+      'jsBasics/**',
+      'test.js',
+    ],
+  },
+
+  // =========================
+  // Base JS config
   // =========================
   {
     files: ['**/*.{js,mjs,cjs}'],
@@ -14,7 +27,7 @@ export default defineConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node, // 👈 для Node.js (require, process, etc.)
+        ...globals.node,
       },
       sourceType: 'module',
     },
@@ -35,6 +48,7 @@ export default defineConfig([
         afterAll: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
+        jest: 'readonly',
       },
     },
   },
@@ -49,4 +63,3 @@ export default defineConfig([
     extends: ['json/recommended'],
   },
 ]);
-
